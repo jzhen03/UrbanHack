@@ -18,6 +18,13 @@
   .navbar .tab {
     margin-bottom: 15px;
   }
+
+  .tabs-vertical {
+    display: flex;
+    flex-direction: column; /* Stack the tabs vertically */
+    gap: 15px; /* Space between each tab */
+    margin-top: 20px; /* Space from the Diagnosis/Connect tabs */
+  }
   
   .navbar .tab a {
     color: white;

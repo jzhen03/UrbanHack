@@ -7,6 +7,11 @@ import Chatbot from './Chatbot.jsx';
 import Navigation from './Navigation.jsx';
 
 function App() {
+  const [count, setCount] = useState(0);
+  const message = "What's your purpose?";
+  const answer = Chatbot(message);
+  console.log(answer);
+
   return (
     <div className="app-container">
       <Chatbot />  {/* Add the navigation component here */}

@@ -8,7 +8,7 @@ function Navigation() {
             <Tab value="Diagonsis Help"/>
             <Tab value="Connect with Doctor"/>
 
-            <div className="navbar">
+            {/*<div className="navbar">
                 <h1>My App</h1>
                 <div className="tabs-vertical">
                     <Tab value = "Tab1"/>
@@ -16,7 +16,7 @@ function Navigation() {
                     <Tab value = "Tab3"/>
                     <Tab value = "Tab4"/>
                 </div>
-            </div>
+            </div>*/}
         </>
         
     );

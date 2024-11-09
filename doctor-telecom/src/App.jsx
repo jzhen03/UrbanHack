@@ -13,9 +13,13 @@ function App() {
   console.log(answer);
 
   return (
-    <div className="app-container">
-      <Chatbot />  {/* Add the navigation component here */}
+    <>
+      <Router>
+      <Navbar/>
+      <Navigation/>
+      <Chatbot/>
       <div className="main-content">
+        
         <div>
           <a href="https://vite.dev" target="_blank">
             <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -37,8 +41,9 @@ function App() {
           Click on the Vite and React logos to learn more
         </p>
       </div>
-    </div>
-  );
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App

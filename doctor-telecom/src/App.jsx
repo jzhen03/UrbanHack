@@ -3,16 +3,13 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-import './Chatbot.jsx';
+import Chatbot from './Chatbot.jsx';
 import Navigation from './Navigation.jsx';
 
 function App() {
-  const [count, setCount] = useState(0);
-  
-
   return (
     <div className="app-container">
-      <Navigation />  {/* Add the navigation component here */}
+      <Chatbot />  {/* Add the navigation component here */}
       <div className="main-content">
         <div>
           <a href="https://vite.dev" target="_blank">

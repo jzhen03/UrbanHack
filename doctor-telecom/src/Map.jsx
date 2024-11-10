@@ -39,12 +39,6 @@ function Map() {
     lng: coordinates.longitude,
   };
 
-  // Define a custom icon if needed
-  const hospitalIcon = {
-    url: '/path-to-your-icon.png', // Replace with your icon URL
-    scaledSize: new window.google.maps.Size(30, 30),
-  };
-
   return (
     <div>
       <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={defaultCenter}>
@@ -56,8 +50,6 @@ function Map() {
               lng: hospital.location.lng,
             }}
             title={hospital.name}
-            // Uncomment and use if you have a custom icon
-            // icon={hospitalIcon}
           />
         ))}
       </GoogleMap>

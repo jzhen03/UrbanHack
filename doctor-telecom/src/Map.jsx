@@ -23,7 +23,7 @@ function Map() {
 
   const mapStyles = {
     height: '80vh',
-    width: '75%',
+    width: '60%',
     margin: 'auto',
     paddingTop: '40px',
     padding: '20px',

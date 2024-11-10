@@ -12,7 +12,7 @@ const searchHospitals = async (latitude, longitude) => {
     const response = await client.placesNearby({
       params: {
         location: {lat: latitude, lng: longitude},
-        radius: 40000,
+        radius: 50000,
         type: "hospital",
         key: process.env.GOOGLEMAPS_API_KEY,
       }

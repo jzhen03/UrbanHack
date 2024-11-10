@@ -6,7 +6,10 @@ import {
   Message,
   MessageInput,
   TypingIndicator,
+  ConversationHeader,
+  Avatar,
 } from '@chatscope/chat-ui-kit-react';
+import { FaUserDoctor } from "react-icons/fa6";
 import './SlackChannel.css'; // Optional: Additional custom styles
 
 const SlackChannel = ({ channelId }) => {
@@ -96,6 +99,19 @@ const SlackChannel = ({ channelId }) => {
 
   return (
     <div className="slack-channel-container">
+      <ConversationHeader>
+        <Avatar
+        name="John Doe"
+        size="lg" 
+        status="online" 
+        active={true}
+        >
+          <FaUserDoctor size="3em" />
+        </Avatar>
+        <ConversationHeader.Content>
+        <h3>Dr. John Doe</h3>
+      </ConversationHeader.Content>
+      </ConversationHeader>
       <ChatContainer>
         <MessageList
           ref={messageListRef}

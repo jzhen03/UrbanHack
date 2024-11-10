@@ -19,7 +19,7 @@ function App() {
     <>
       <Router>
       <Navbar/>
-      <Chatbot/>
+      {/* <Chatbot/> */}
       <SlackChannel channelId={channelId} />
       </Router>
     </>

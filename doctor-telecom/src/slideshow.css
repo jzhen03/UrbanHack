@@ -6,6 +6,7 @@
     width: 90%;
     height: 90%;
     margin-top: -5%;
+    z-index: -1;
   }
   
   .slide {

@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;  /* Space between icon and title */
   align-items: center;
+  z-index: 1000;
 }
 
 /* Navbar menu icon */

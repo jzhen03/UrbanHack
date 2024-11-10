@@ -5,7 +5,7 @@ import * as IoIcons2 from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './navbarData';
 import { IconContext } from 'react-icons';
-import './navbar.css';
+import './NavBar.css';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);

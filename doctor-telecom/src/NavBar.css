@@ -44,17 +44,17 @@
   text-decoration: none;
   color: #f5f5f5;
   font-size: 18px;
-  width: 95%;
+  width: 80%;
   height: 100%;
   display: flex;
   align-items: center;
   padding: 0 16px;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .nav-text a:hover {
   background-color: #9F3637;
-  padding: 0 16px;
 }
 
 .nav-menu-items {

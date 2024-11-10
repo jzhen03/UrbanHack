@@ -17,7 +17,7 @@ const searchHospitals = async (latitude, longitude) => {
         key: process.env.GOOGLEMAPS_API_KEY,
       }
     });
-    console.log(response.data.results);
+    //console.log(response.data.results);
     return response.data.results;
   } catch (e) {
     if (e.response && e.response.data && e.response.data.error_message) {

@@ -24,7 +24,7 @@ function App() {
         <Navbar/>
         <div className='content'>
           <Routes>
-            <Route path='/home' element={<Home/>}/>
+            <Route path='/' element={<Home/>}/>
             <Route path='/aichatbot' element={<Chatbot/>}/>
             <Route path='/slackchannel' element={<SlackChannel channelId={channelId} />}/>
             <Route path='/map' element={<MapProvider><Map/></MapProvider>}/>

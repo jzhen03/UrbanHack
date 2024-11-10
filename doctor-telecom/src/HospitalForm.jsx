@@ -1,5 +1,3 @@
-// src/components/HospitalForm.jsx
-
 import React, { useState } from "react";
 import {
   Box,
@@ -12,11 +10,10 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { LocalizationProvider, DatePicker } from "@mui/lab"; // Optional: For date selection
+import { LocalizationProvider, DatePicker } from "@mui/lab"; 
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 
 const HospitalForm = () => {
-  // State to manage form data
   const [formData, setFormData] = useState({
     attendantName: "",
     patientName: "",
@@ -24,10 +21,8 @@ const HospitalForm = () => {
     hospital: "",
     reason: "",
     description: "",
-    appointmentDate: null, // Optional: If you want to include a date picker
+    appointmentDate: null, 
   });
-
-  // State to manage form errors
   const [errors, setErrors] = useState({});
 
   // Example hospital names
@@ -42,7 +37,6 @@ const HospitalForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Update form data
     setFormData({
       ...formData,
       [name]: value,
@@ -55,7 +49,6 @@ const HospitalForm = () => {
     });
   };
 
-  // Handle date change (if using DatePicker)
   const handleDateChange = (date) => {
     setFormData({
       ...formData,
@@ -82,10 +75,6 @@ const HospitalForm = () => {
     }
     if (!formData.hospital) tempErrors.hospital = "Please select a hospital.";
     if (!formData.reason.trim()) tempErrors.reason = "Reason for visit is required.";
-    // Description can be optional or required based on your needs
-
-    // Uncomment if using DatePicker
-    // if (!formData.appointmentDate) tempErrors.appointmentDate = "Appointment date is required.";
 
     setErrors(tempErrors);
 
@@ -98,7 +87,6 @@ const HospitalForm = () => {
     e.preventDefault();
 
     if (validate()) {
-      // Process form data
       console.log("Form Data:", formData);
 
       // Reset form
@@ -112,7 +100,6 @@ const HospitalForm = () => {
         appointmentDate: null,
       });
 
-      // Optionally, display a success message or redirect
       alert("Request Form Successfully Sent!");
     }
   };
@@ -232,8 +219,8 @@ const HospitalForm = () => {
           />
         </Grid>
 
-        {/* Optional: Appointment Date */}
-        {/* Uncomment if you want to include a date picker */}
+        {/* Appointment Date */}
+
         <Grid item xs={12}>
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <DatePicker
@@ -264,7 +251,6 @@ const HospitalForm = () => {
   );
 };
 
-// Define PropTypes for type checking (optional if you pass props)
 HospitalForm.propTypes = {};
 
 export default HospitalForm;

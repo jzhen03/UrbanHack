@@ -1,4 +1,3 @@
-// src/SlackChannel.jsx
 import React, { useEffect, useState, useRef } from 'react';
 import {
   ChatContainer,
@@ -10,21 +9,20 @@ import {
   Avatar,
 } from '@chatscope/chat-ui-kit-react';
 import { FaUserDoctor } from "react-icons/fa6";
-import './SlackChannel.css'; // Optional: Additional custom styles
+import './SlackChannel.css'; 
 
 const SlackChannel = ({ channelId }) => {
   const [messages, setMessages] = useState([]);
   const [typing, setTyping] = useState(false);
   const [error, setError] = useState(null);
-  const [currentUserId, setCurrentUserId] = useState(null); // State for current user ID
-  const token = import.meta.env.VITE_SLACK_API_TOKEN; // Use environment variable for token
-  const messageListRef = useRef(null); // Ref for MessageList
+  const [currentUserId, setCurrentUserId] = useState(null); 
+  const token = import.meta.env.VITE_SLACK_API_TOKEN; 
+  const messageListRef = useRef(null); 
 
   // Function to fetch messages from Slack
   const fetchMessages = async () => {
     try {
       const msgs = await getMessages(channelId);
-      // Enrich messages with usernames
       const messagesWithUser = await Promise.all(
         msgs.map(async (msg) => {
           const username = await getUsername(msg.user);
@@ -40,12 +38,12 @@ const SlackChannel = ({ channelId }) => {
 
   // Function to send a new message
   const sendMessage = async (text) => {
-    if (text.trim() === '') return; // Prevent sending empty messages
+    if (text.trim() === '') return; 
     try {
-      setTyping(true); // Show typing indicator
+      setTyping(true); 
       await postMessage(channelId, text);
       setTyping(false);
-      fetchMessages(); // Refresh messages after sending
+      fetchMessages();
     } catch (err) {
       console.error(err);
       setError(err.message);
@@ -76,13 +74,9 @@ const SlackChannel = ({ channelId }) => {
   };
 
   useEffect(() => {
-    // Fetch current user ID on component mount
     getCurrentUserId();
-
-    // Fetch messages on component mount
     fetchMessages();
 
-    // Optionally, set up polling for real-time updates
     const interval = setInterval(() => {
       fetchMessages();
     }, 500000); // Fetch every 5 seconds
@@ -91,7 +85,6 @@ const SlackChannel = ({ channelId }) => {
   }, [channelId]);
 
   useEffect(() => {
-    // Scroll to the latest message
     if (messageListRef.current) {
       messageListRef.current.scrollToBottom();
     }
@@ -133,7 +126,7 @@ const SlackChannel = ({ channelId }) => {
               }}
             />
           ))}
-          {/* Removed the invalid <div> */}
+          {}
         </MessageList>
         <MessageInput
           placeholder="Type your message here"
@@ -146,9 +139,9 @@ const SlackChannel = ({ channelId }) => {
   );
 };
 
-// Helper function to fetch messages
+// Function to fetch messages
 const getMessages = async (channelId) => {
-  const token = import.meta.env.VITE_SLACK_API_TOKEN; // Use environment variable for token
+  const token = import.meta.env.VITE_SLACK_API_TOKEN; 
   const response = await fetch(
     `https://cors-anywhere.herokuapp.com/https://slack.com/api/conversations.history?channel=${channelId}&limit=50`,
     {
@@ -164,9 +157,9 @@ const getMessages = async (channelId) => {
   }
 };
 
-// Helper function to send a message
+// Function to send message
 const postMessage = async (channelId, text) => {
-  const token = import.meta.env.VITE_SLACK_API_TOKEN; // Use environment variable for token
+  const token = import.meta.env.VITE_SLACK_API_TOKEN;
   const response = await fetch(
     'https://cors-anywhere.herokuapp.com/https://slack.com/api/chat.postMessage',
     {
@@ -188,9 +181,9 @@ const postMessage = async (channelId, text) => {
   return data;
 };
 
-// Helper function to fetch username from user ID using users.profile.get
+// Function to fetch username from user ID using users.profile.get
 const getUsername = async (userId) => {
-  const token = import.meta.env.VITE_SLACK_API_TOKEN; // Use environment variable for token
+  const token = import.meta.env.VITE_SLACK_API_TOKEN; 
   try {
     const response = await fetch(
       `https://cors-anywhere.herokuapp.com/https://slack.com/api/users.profile.get?user=${userId}`,
@@ -201,7 +194,6 @@ const getUsername = async (userId) => {
     const data = await response.json();
     console.log("USERNAME:", data);
     
-    // Corrected property access
     if (data.ok && data.profile) {
       return data.profile.display_name || data.profile.real_name || 'Unknown User';
     } else {

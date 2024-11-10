@@ -3,7 +3,7 @@
   background-color: #CA2225;
   height: 80px;
   display: flex;
-  justify-content: space-between;  /* Space between icon and title */
+  justify-content: space-between; 
   align-items: center;
   z-index: 1000;
   position: relative;
@@ -80,7 +80,7 @@ span {
   display: inline-block;
   text-align: center;
   padding: 0.5rem 1rem;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   cursor: pointer;
   background-color: transparent; 
   justify-content: center;

@@ -1,5 +1,3 @@
-// src/data/patientData.js
-
 const patientData = {
     personalInfo: {
       fullName: "Jane Doe",

@@ -13,10 +13,9 @@ const Slideshow = ({ data }) => {
     setSlide(slide === 0 ? data.length - 1 : slide - 1);
   };
 
-  // useEffect for auto-scrolling
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide(); // Automatically move to the next slide
+      nextSlide(); 
     }, 3000); 
 
    

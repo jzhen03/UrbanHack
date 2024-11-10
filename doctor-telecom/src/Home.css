@@ -1,10 +1,7 @@
-/* Home.css */
-
-/* Image container */
 .image-container {
   width: 100%;
-  height: 50;  /* Set a fixed height to ensure the image doesn't stretch too much */
-  overflow: hidden;  /* Hide overflow to prevent anything outside the container from showing */
+  height: 50;  
+  overflow: hidden;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,11 +10,10 @@
 
 .home-image {
   width: 100%;
-  height: 100%;  /* Make sure the image takes up the full height of its container */
-  object-fit: cover; /* Cover the container without distorting the image */
+  height: 100%;  
+  object-fit: cover;
 }
 
-/* Features Section */
 .features-container {
   display: flex;
   justify-content: space-around;

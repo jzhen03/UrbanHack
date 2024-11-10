@@ -6,7 +6,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 function Map() {
   const [coordinates, setCoordinates] = useState({ latitude: 42.65, longitude: -73.75 });
   const [hospitals, setHospitals] = useState([]);
-  const [selectedHospital, setSelectedHospital] = useState(null); // State to track selected hospital
+  const [selectedHospital, setSelectedHospital] = useState(null);
 
   const fetchHospitals = async () => {
     try {

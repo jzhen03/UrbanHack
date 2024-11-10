@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoadScript } from '@react-google-maps/api';
 
-const libraries = ['places']; // Add any libraries you need
+const libraries = ['places'];
 
 const MapProvider = ({ children }) => {
   const { isLoaded, loadError } = useLoadScript({

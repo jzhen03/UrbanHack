@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';  // We will create a new CSS file for this
+import './Home.css'; 
 import Slideshow from './slideshow';
 import {slides} from './slideshowData.json'
 

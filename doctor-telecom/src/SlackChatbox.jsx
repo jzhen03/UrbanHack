@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SlackChatbox.css'; // Import CSS for styling
+import './SlackChatbox.css'; 
 
 const SlackChatBox = ({ onSend }) => {
   const [input, setInput] = useState('');
@@ -7,12 +7,12 @@ const SlackChatBox = ({ onSend }) => {
   const [error, setError] = useState(null);
 
   const handleSend = async () => {
-    if (input.trim() === '') return; // Prevent sending empty messages
+    if (input.trim() === '') return; 
     setSending(true);
     setError(null);
     try {
       await onSend(input);
-      setInput(''); // Clear input field on success
+      setInput(''); 
     } catch (err) {
       setError('Failed to send message.');
       console.error(err);

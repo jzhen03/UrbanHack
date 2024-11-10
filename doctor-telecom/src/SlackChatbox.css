@@ -17,7 +17,7 @@
   .chatbox button {
     padding: 10px 20px;
     border: none;
-    background-color: #4a154b; /* Slack's purple color */
+    background-color: #4a154b; 
     color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;

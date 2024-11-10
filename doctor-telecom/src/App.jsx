@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react';
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
@@ -10,8 +9,8 @@ import Chatbot from './Chatbot.jsx';
 import Map from './Map.jsx';
 import MapProvider from './MapProvider.jsx';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import SlackChannel from './SlackChannel.jsx'; // Updated import
-import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'; // Import ChatScope styles
+import SlackChannel from './SlackChannel.jsx'; 
+import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'; 
 import PatientData from "./PatientData.jsx";
 import patientData from "./data/PatientData.js";
 import { Container, Typography } from "@mui/material";

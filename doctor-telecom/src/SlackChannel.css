@@ -1,9 +1,7 @@
-/* src/SlackChannel.css */
-
 .slack-channel-container {
   max-width: 800px;
   margin: 20px auto;
-  height: 600px; /* Adjust as needed */
+  height: 600px; 
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #ffffff;

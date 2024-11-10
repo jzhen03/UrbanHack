@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import {Typography} from "@mui/material";
 
 function Chatbot() {
   const [prompt, setPrompt] = useState("");
@@ -11,21 +10,17 @@ function Chatbot() {
     if (!prompt.trim()) return;
 
     try {
-      // Send the prompt to your server
       const res = await axios.post('http://localhost:8020/chat', { prompt });
 
-      // Update the conversation state with the user's prompt and assistant's response
       setConversation([
         ...conversation,
         { sender: 'User', message: prompt },
         { sender: 'MedLink Bro', message: res.data },
       ]);
 
-      // Clear the input field
       setPrompt("");
     } catch (error) {
       console.error("Error sending message:", error);
-      // Optionally, handle the error by displaying a message in the conversation
       setConversation([
         ...conversation,
         { sender: 'User', message: prompt },

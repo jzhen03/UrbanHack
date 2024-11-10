@@ -98,6 +98,8 @@ const SlackChannel = ({ channelId }) => {
   }, [messages]);
 
   return (
+    <>
+    <h2 style={{textAlign: "center"}}>Consult with another Doctor</h2>
     <div className="slack-channel-container">
       <ConversationHeader>
         <Avatar
@@ -140,6 +142,7 @@ const SlackChannel = ({ channelId }) => {
       </ChatContainer>
       {error && <p className="error">Error: {error}</p>}
     </div>
+    </>
   );
 };
 

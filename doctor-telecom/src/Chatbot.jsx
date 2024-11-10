@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import {Typography} from "@mui/material";
 
 function Chatbot() {
   const [prompt, setPrompt] = useState("");
@@ -35,6 +36,8 @@ function Chatbot() {
   };
 
   return (
+    <>
+    <h2 style={{textAlign: "center"}}>Chat with MedLink Bro</h2>
     <div style={styles.chatContainer}>
       <div style={styles.conversation}>
         {conversation.map((entry, index) => (
@@ -61,6 +64,7 @@ function Chatbot() {
         <button type="submit" style={styles.button}>Send</button>
       </form>
     </div>
+    </>
   );
 }
 
@@ -69,10 +73,9 @@ const styles = {
       display: 'flex',
       flexDirection: 'column',
       height: '100vh',
-      width: 'calc(100% - 270px - 40px)',
-      maxWidth: '75%',
+      maxWidth: '800px',
       maxHeight: '80%',
-      margin: '20px 20px 20px 270px',
+      margin: '20px auto',
       padding: '20px',
       borderRadius: '20px',
       overflow: 'hidden',

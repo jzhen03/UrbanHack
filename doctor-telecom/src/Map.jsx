@@ -1,4 +1,3 @@
-// Map.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { GoogleMap, Marker } from '@react-google-maps/api';
@@ -22,16 +21,15 @@ function Map() {
   }, [coordinates]);
 
   const mapStyles = {
-    height: '80vh',
-    width: '60%',
-    margin: 'auto',
-    paddingTop: '40px',
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100vh',
+    maxWidth: '800px',
+    maxHeight: '600px',
+    margin: '20px auto',
     padding: '20px',
     borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    backgroundColor: '#CA2225',
-    position: 'relative',
+    overflow: 'hidden'
   };
 
   const defaultCenter = {
@@ -78,6 +76,8 @@ function Map() {
   };
 
   return (
+    <>
+    <h2 style={{textAlign: "center"}}>Nearby Hospital and Doctor Availability</h2>
     <div>
       <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={defaultCenter} options={{ styles: customMapStyle }}>
         {hospitals.map((hospital, index) => (
@@ -93,6 +93,7 @@ function Map() {
         ))}
       </GoogleMap>
     </div>
+    </>
   );
 }
 

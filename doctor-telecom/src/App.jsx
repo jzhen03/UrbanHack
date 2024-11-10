@@ -8,6 +8,7 @@ import Home from './Home.jsx';
 import Navbar from './navbar.jsx';
 import Chatbot from './Chatbot.jsx';
 import Map from './Map.jsx';
+import MapProvider from './MapProvider.jsx';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SlackChannel from './SlackChannel.jsx'; // Updated import
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'; // Import ChatScope styles
@@ -23,9 +24,10 @@ function App() {
         <Navbar/>
         <div className='content'>
           <Routes>
-            <Route path='/home' element={<Map/>}/>
+            <Route path='/home' element={<Home/>}/>
             <Route path='/aichatbot' element={<Chatbot/>}/>
             <Route path='/slackchannel' element={<SlackChannel channelId={channelId} />}/>
+            <Route path='/map' element={<MapProvider><Map/></MapProvider>}/>
           </Routes>
         </div>
       </div>

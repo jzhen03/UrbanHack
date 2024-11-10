@@ -15,7 +15,7 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Chat',
+    title: 'MedLink Bro',
     path: '/aichatbot',
     icon: <IoIcons2.IoChatbubbleEllipses/>,
     cName: 'nav-text'
@@ -27,9 +27,9 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Products',
-    path: '/heatmap',
-    icon: <FaIcons.FaCartPlus />,
+    title: 'Location Availability',
+    path: '/map',
+    icon: <FaIcons.FaHospital/>,
     cName: 'nav-text'
   },
   {

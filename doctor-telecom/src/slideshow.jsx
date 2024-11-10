@@ -17,11 +17,11 @@ const Slideshow = ({ data }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide(); // Automatically move to the next slide
-    }, 3000); // Change slide every 3 seconds
+    }, 3000); 
 
-    // Cleanup function to clear the interval when the component unmounts
+   
     return () => clearInterval(interval);
-  }, [slide]); // Depend on `slide` to reset the timer when it changes
+  }, [slide]); 
 
   return (
     <div className="slideshow">
@@ -32,7 +32,7 @@ const Slideshow = ({ data }) => {
             src={item.src}
             alt={item.alt}
             key={idx}
-            className={slide === idx ? "slide" : "slide slide-hidden"}
+            className={slide === idx ? "slide slide-visible" : "slide"}
           />
         );
       })}

@@ -1,5 +1,5 @@
 import Tab from './Tab.jsx';
-import './navbar.css';
+import './NavBar.css';
 
 function Navigation() {
     return (

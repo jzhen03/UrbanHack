@@ -28,7 +28,7 @@ export const SidebarData = [
   },
   {
     title: 'Products',
-    //path: '/products',
+    path: '/heatmap',
     icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
   },

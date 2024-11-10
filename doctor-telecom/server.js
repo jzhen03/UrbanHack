@@ -2,9 +2,32 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { OpenAI } from "openai";
+import {Client} from "@googlemaps/google-maps-services-js";
 
 dotenv.config();
 
+const client = new Client({});
+const searchHospitals = async (latitude, longitude) => {
+  try {
+    const response = await client.placesNearby({
+      params: {
+        location: {lat: latitude, lng: longitude},
+        radius: 40000,
+        type: "hospital",
+        key: process.env.GOOGLEMAPS_API_KEY,
+      }
+    });
+    console.log(response.data.results);
+    return response.data.results;
+  } catch (e) {
+    if (e.response && e.response.data && e.response.data.error_message) {
+      console.error("API Error:", e.response.data.error_message);
+    } else {
+      console.error("Error:", e.message);
+    }
+    return [];
+  }
+}; 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -12,6 +35,22 @@ const openai = new OpenAI({
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+app.post("/search", async (req, res)=> {
+  try {
+    const {latitude, longitude} = req.body;
+    const hospitals = await searchHospitals(latitude, longitude);
+    const hospitalData = hospitals.map((hospital) => ({
+      name: hospital.name,
+      address: hospital.vicinity,
+      location: hospital.geometry.location,
+    }));
+    res.json({hospitals: hospitalData});
+  } catch (error) {
+    console.error("Server Error:", error);
+    res.status(500).json({ error: "Internal server error." });
+  }
+});
 
 app.post("/chat", async (req, res) => {
   try {

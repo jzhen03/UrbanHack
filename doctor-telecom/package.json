@@ -10,17 +10,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@googlemaps/google-maps-services-js": "^3.4.0",
+    "@react-google-maps/api": "^2.20.3",
     "axios": "^1.7.7",
     "body-parse": "^0.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "google-map-react": "^2.2.1",
     "openai": "^4.71.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
+    "@chatscope/chat-ui-kit-react": "^2.0.3",
     "@eslint/js": "^9.13.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
@@ -30,7 +36,6 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
-    "vite": "^5.4.10",
-    "@chatscope/chat-ui-kit-react": "^2.0.3"
+    "vite": "^5.4.10"
   }
 }

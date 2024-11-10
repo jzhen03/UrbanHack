@@ -1,27 +1,29 @@
+/* Navbar styling */
 .navbar {
   background-color: #CA2225;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;  /* Space between icon and title */
   align-items: center;
 }
 
+/* Navbar menu icon */
 .menu-bars {
-  margin-left: 2rem;
+  /*margin-left: 2rem;*/
   font-size: 2rem;
   background: none;
 }
 
+/* Sidebar styling */
 .nav-menu {
   background-color: #CA2225;
   width: 250px;
   height: 100vh;
-  display: flex;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: -100%;
   transition: 850ms;
+  font-family: "Gill Sans", sans-serif;
 }
 
 .nav-menu.active {
@@ -42,12 +44,13 @@
   text-decoration: none;
   color: #f5f5f5;
   font-size: 18px;
-  width: 95%;
+  width: 80%;
   height: 100%;
   display: flex;
   align-items: center;
   padding: 0 16px;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .nav-text a:hover {
@@ -56,6 +59,7 @@
 
 .nav-menu-items {
   width: 100%;
+  padding: 0 16px;
 }
 
 .navbar-toggle {
@@ -69,4 +73,18 @@
 
 span {
   margin-left: 16px;
+}
+
+/* Project Title styling */
+.project-title {
+  font-size: 3.5rem;  /* Larger size for prominence */
+  font-family: 'Merriweather', serif;  /* Use the correct font */
+  font-weight: 500;  /* Medium weight for a balanced look */
+  color: #fff;  /* White color for the title */
+  text-align: center;  /* Center the title */
+  margin: 0;  /* Remove any default margin */
+  padding: 1rem;  /* Padding around the title */
+  flex-grow: 1;  /* Allow the title to take up available space */
+  display: flex;
+  justify-content: center;  /* Center the title horizontally within the navbar */
 }

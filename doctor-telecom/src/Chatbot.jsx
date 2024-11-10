@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function Chatbot() {
   const [prompt, setPrompt] = useState("");
-  const [conversation, setConversation] = useState([]);
+  const [conversation, setConversation] = useState([{sender:"MedLink Bro", message:"Hi, I'm MedLink Bro, your personal diagonsis assistant! I specialize in confirming and helping you with basic diagonsis and treatment plans to help you treat less severe cases."}]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ function Chatbot() {
       setConversation([
         ...conversation,
         { sender: 'User', message: prompt },
-        { sender: 'Assistant', message: res.data },
+        { sender: 'MedLink Bro', message: res.data },
       ]);
 
       // Clear the input field
@@ -28,7 +28,7 @@ function Chatbot() {
       setConversation([
         ...conversation,
         { sender: 'User', message: prompt },
-        { sender: 'Assistant', message: 'Sorry, an error occurred. Please try again later.' },
+        { sender: 'MedLink Bro', message: 'Sorry, an error occurred. Please try again later.' },
       ]);
       setPrompt("");
     }
@@ -42,7 +42,7 @@ function Chatbot() {
             key={index}
             style={{
               ...styles.message,
-              alignSelf: entry.sender === 'User' ? 'flex-end' : 'flex-start',
+              marginLeft: entry.sender === 'User' ? 'auto' : '0',
               backgroundColor: entry.sender === 'User' ? '#DCF8C6' : '#FFF',
             }}
           >
@@ -65,40 +65,60 @@ function Chatbot() {
 }
 
 const styles = {
-  chatContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100vh',
-    maxWidth: '600px',
-    margin: '0 auto',
-  },
-  conversation: {
-    flex: 1,
-    padding: '10px',
-    overflowY: 'auto',
-    backgroundColor: '#ECE5DD',
-  },
-  message: {
-    maxWidth: '80%',
-    margin: '5px',
-    padding: '10px',
-    borderRadius: '5px',
-    wordWrap: 'break-word',
-  },
-  form: {
-    display: 'flex',
-    padding: '10px',
-    backgroundColor: '#FFF',
-  },
-  input: {
-    flex: 1,
-    padding: '10px',
-    fontSize: '16px',
-  },
-  button: {
-    padding: '10px 20px',
-    fontSize: '16px',
-  },
-};
+    chatContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100vh',
+      width: 'calc(100% - 270px - 40px)',
+      maxWidth: '75%',
+      maxHeight: '80%',
+      margin: '20px 20px 20px 270px',
+      padding: '20px',
+      borderRadius: '20px',
+      overflow: 'hidden',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      backgroundColor: '#CA2225'
+    },
+    conversation: {
+      flex: 1,
+      padding: '10px',
+      overflowY: 'auto',
+      backgroundColor: '#ECE5DD',
+      borderTopLeftRadius: '20px',
+      borderTopRightRadius: '20px',
+    },
+    message: {
+      maxWidth: '80%',
+      margin: '5px',
+      padding: '10px',
+      borderRadius: '10px',
+      wordWrap: 'break-word',
+    },
+    form: {
+      display: 'flex',
+      padding: '10px',
+      backgroundColor: '#FFF',
+      borderBottomLeftRadius: '20px',
+      borderBottomRightRadius: '20px',
+    },
+    input: {
+      flex: 1,
+      padding: '10px',
+      fontSize: '16px',
+      borderRadius: '5px',
+      border: '1px solid #ccc',
+    },
+    button: {
+      padding: '10px 20px',
+      fontSize: '16px',
+      marginLeft: '10px',
+      borderRadius: '5px',
+      backgroundColor: '#4CAF50',
+      color: '#FFF',
+      border: 'none',
+      cursor: 'pointer',
+    },
+  };
+  
 
 export default Chatbot;

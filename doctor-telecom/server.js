@@ -21,7 +21,7 @@ app.post("/chat", async (req, res) => {
     }
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini", // Use a chat completion model
+      model: "gpt-4o-2024-08-06", 
       messages: [{role: 'system', content:`You are a medical assistant chatbot. Provide evidence based information to help with medical diagonsis and treatment plans. You're meant to specialize increasing patient turnover by assiting and confiriming nurse drive diagonsis on simple cases.`},{ role: "user", content: prompt }],
       max_tokens: 512,
       temperature: 0,

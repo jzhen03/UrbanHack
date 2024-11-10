@@ -6,7 +6,6 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import Navbar from './navbar.jsx';
 import Chatbot from './Chatbot.jsx';
-import Navigation from './Navigation.jsx';
 import { BrowserRouter as Router} from 'react-router-dom';
 import SlackChannel from './SlackChannel.jsx'; // Updated import
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'; // Import ChatScope styles

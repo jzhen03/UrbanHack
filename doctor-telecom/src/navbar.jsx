@@ -11,7 +11,7 @@ function Navbar() {
   const showSidebar = () => setSidebar(!sidebar);
 
   const navigate = useNavigate()
-  const titleClick = () => {navigate('/home');
+  const titleClick = () => {navigate('/');
   };
 
   return (
@@ -22,7 +22,9 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
           <div className='project-title-container'>
-            <h1 className='project-title' onClick={titleClick}> MedLink Pro</h1>
+            <div className='project-title-inside'>
+              <h1 className='project-title' onClick={titleClick}> MedLink Pro</h1>
+            </div>
           </div>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

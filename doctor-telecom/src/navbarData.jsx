@@ -40,8 +40,8 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Messages',
-    //path: '/messages',
+    title: 'Hospital Form',
+    path: '/hospitalform',
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },

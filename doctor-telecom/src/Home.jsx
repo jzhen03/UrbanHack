@@ -1,5 +1,7 @@
 import React from 'react';
 import './Home.css';  // We will create a new CSS file for this
+import Slideshow from './slideshow';
+import {slides} from './slideshowData.json'
 
 
 function Home() {
@@ -7,12 +9,8 @@ function Home() {
     <>
       {/* Image Section */}
       <div className="image-container">
-        <img 
-          src="https://srsnf.com/wp-content/uploads/2022/08/16F2FB1A-79E5-4AF3-B28B-3192762E0A9A.jpeg"
-          alt="Medical Assistance"
-          className="home-image"
-        />
-    </div>
+        <Slideshow data={slides}/>
+      </div>
 
       {/* Features Section */}
       <div className="features-container">

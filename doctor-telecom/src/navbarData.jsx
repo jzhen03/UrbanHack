@@ -3,6 +3,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as IoIcons2 from 'react-icons/io5';
+import * as FaIcons2 from "react-icons/fa6";
 
 
 
@@ -18,12 +19,12 @@ export const SidebarData = [
     title: 'MedLink Bro',
     path: '/aichatbot',
     icon: <IoIcons2.IoChatbubbleEllipses/>,
-    cName: 'nav-text'
+    cName: 'nav-text' 
   },
   {
     title: 'Doctor Consult',
     path: '/slackchannel',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <FaIcons2.FaUserDoctor />,
     cName: 'nav-text'
   },
   {

@@ -75,6 +75,16 @@ span {
   margin-left: 16px;
 }
 
+.project-title-container {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  background-color: transparent; 
+}
+
 /* Project Title styling */
 .project-title {
   font-size: 3.5rem;  /* Larger size for prominence */
@@ -87,4 +97,10 @@ span {
   flex-grow: 1;  /* Allow the title to take up available space */
   display: flex;
   justify-content: center;  /* Center the title horizontally within the navbar */
+}
+
+.project-title:hover {
+  background-color: #9F3637;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  cursor: pointer; /* Change the cursor to indicate it's clickable */
 }

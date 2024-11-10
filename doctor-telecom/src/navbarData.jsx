@@ -33,8 +33,8 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Team',
-    //path: '/team',
+    title: 'Patient Info',
+    path: '/patientdata',
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },

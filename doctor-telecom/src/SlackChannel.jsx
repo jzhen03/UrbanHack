@@ -103,7 +103,7 @@ const SlackChannel = ({ channelId }) => {
         <Avatar
         name="John Doe"
         size="lg" 
-        status="online" 
+        status="available" 
         active={true}
         >
           <FaUserDoctor size="3em" />

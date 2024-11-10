@@ -3,7 +3,7 @@ import Chatbot from "./Chatbot.jsx";
 function ChatbotPage() {
     return (
        <>
-            <Chatbot/>
+        <Chatbot/>
        </> 
     );
 }

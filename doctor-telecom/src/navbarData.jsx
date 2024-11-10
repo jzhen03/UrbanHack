@@ -9,13 +9,14 @@ import * as IoIcons2 from 'react-icons/io5';
 export const SidebarData = [
   {
     title: 'Home',
-    //path: '/',
+    path: '/slackchannel',
     icon: <AiIcons.AiFillHome />,
     
     cName: 'nav-text'
   },
   {
     title: 'Chat',
+    path: '/aichatbot',
     icon: <IoIcons2.IoChatbubbleEllipses/>,
     cName: 'nav-text'
   },

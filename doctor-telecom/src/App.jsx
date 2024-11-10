@@ -6,7 +6,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import Navbar from './navbar.jsx';
 import Chatbot from './Chatbot.jsx';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SlackChannel from './SlackChannel.jsx'; // Updated import
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'; // Import ChatScope styles
 
@@ -17,9 +17,17 @@ function App() {
   return (
     <>
       <Router>
-      <Navbar/>
-      {/* <Chatbot/> */}
-      <SlackChannel channelId={channelId} />
+      <div className = "app">
+        <Navbar/>
+        <div className='content'>
+          <Routes>
+            <Route path='/aichatbot' element={<Chatbot/>}/>
+            <Route path='/slackchannel' element={<SlackChannel channelId={channelId} />}/>
+            
+          </Routes>
+        </div>
+      </div>
+
       </Router>
     </>
   );

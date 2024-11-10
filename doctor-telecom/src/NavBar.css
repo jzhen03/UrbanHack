@@ -7,7 +7,7 @@
 }
 
 .menu-bars {
-  margin-left: 2rem;
+  /*margin-left: 2rem;*/
   font-size: 2rem;
   background: none;
 }
@@ -52,10 +52,12 @@
 
 .nav-text a:hover {
   background-color: #9F3637;
+  padding: 0 16px;
 }
 
 .nav-menu-items {
   width: 100%;
+  padding: 0 16px;
 }
 
 .navbar-toggle {

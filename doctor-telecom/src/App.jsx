@@ -15,6 +15,7 @@ import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'; // Import Ch
 import PatientData from "./PatientData.jsx";
 import patientData from "./data/PatientData.js";
 import { Container, Typography } from "@mui/material";
+import HospitalForm from './HospitalForm.jsx';
 
 function App() {
 
@@ -37,6 +38,12 @@ function App() {
                 </Typography>
                 <PatientData patient={patientData} />
               </Container>}/>
+            <Route path='/hospitalform' element={<Container>
+              <Typography variant="h4" align="center" gutterBottom sx={{ marginTop: 4 }}>
+                Form Request
+              </Typography>
+              <HospitalForm />
+            </Container>} />
           </Routes>
         </div>
       </div>

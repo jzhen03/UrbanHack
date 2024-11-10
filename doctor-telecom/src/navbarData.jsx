@@ -9,9 +9,9 @@ import * as IoIcons2 from 'react-icons/io5';
 export const SidebarData = [
   {
     title: 'Home',
-    path: '/slackchannel',
+    path: '/home',
     icon: <AiIcons.AiFillHome />,
-    
+
     cName: 'nav-text'
   },
   {
@@ -21,8 +21,8 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Reports',
-    //path: '/reports',
+    title: 'Doctor Consult',
+    path: '/slackchannel',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },

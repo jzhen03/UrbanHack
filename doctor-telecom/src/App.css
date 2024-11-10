@@ -59,3 +59,18 @@ body {
   background-color: #CA2225;
   padding: 10px;
 }
+
+.image-container{
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide any part of the image that overflows */
+  display: flex;  /* Allow flexbox behavior */
+  justify-content: center;  /* Center horizontally */
+  align-items: center;  /* Center vertically */
+}
+
+.home-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

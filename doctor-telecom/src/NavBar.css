@@ -79,28 +79,41 @@ span {
   display: inline-block;
   text-align: center;
   padding: 0.5rem 1rem;
-  border: 2px solid #fff;
   border-radius: 8px; /* Rounded corners */
   cursor: pointer;
   background-color: transparent; 
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
-/* Project Title styling */
+.project-title-inside {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: transparent; 
+  justify-content: center;
+  align-items: center;
+}
+
 .project-title {
-  font-size: 3.5rem;  /* Larger size for prominence */
-  font-family: 'Merriweather', serif;  /* Use the correct font */
-  font-weight: 500;  /* Medium weight for a balanced look */
-  color: #fff;  /* White color for the title */
-  text-align: center;  /* Center the title */
-  margin: 0;  /* Remove any default margin */
-  padding: 1rem;  /* Padding around the title */
-  flex-grow: 1;  /* Allow the title to take up available space */
+  font-size: 3.5rem;  
+  font-family: 'Merriweather', serif; 
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  margin: 0; 
+  padding: 1rem;
+  flex-grow: 1;
   display: flex;
-  justify-content: center;  /* Center the title horizontally within the navbar */
+  justify-content: center; 
 }
 
 .project-title:hover {
   background-color: #9F3637;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-  cursor: pointer; /* Change the cursor to indicate it's clickable */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border-radius: 8px;
 }
